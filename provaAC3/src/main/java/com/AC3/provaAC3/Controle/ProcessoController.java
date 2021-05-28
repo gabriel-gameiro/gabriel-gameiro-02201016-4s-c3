@@ -1,5 +1,6 @@
 package com.AC3.provaAC3.Controle;
 
+import com.AC3.provaAC3.Agendamento.AgendamentoService;
 import com.AC3.provaAC3.Dominio.*;
 import com.AC3.provaAC3.Modelos.SkateRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -67,6 +68,7 @@ public class ProcessoController {
             protocolosExecutados.add(pExec);
             break;
         }
+        System.out.println("Fila esvaziada e processos executados!");
         return ResponseEntity.status(200).body("Processos em fila executados!");
     }
 
